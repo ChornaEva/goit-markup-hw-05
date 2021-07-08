@@ -55,7 +55,7 @@
             <section class="section-baner section">
                 <div class="container">
                     <h1 class="title-baner"><span>Эффективные решения для вашего бизнеса</span></h1>
-                    <button class="baner-button" type="button">Заказать услугу</button>
+                    <button class="baner-button" type="button" data-modal-open>Заказать услугу</button>   
                 </div>
             </section>
             <!-- секция преимущества -->
@@ -382,6 +382,16 @@
                     </ul>
                 </div>
             </div>
-        </footer>    
+        </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="close-button" data-modal-close>
+                    <svg class="icon-close" width="18px" height="18px">
+                        <use href="./images/svg/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>

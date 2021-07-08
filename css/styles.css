@@ -98,6 +98,9 @@ img {
 .icon-envelope,
 .icon-phone {
   margin-right: 10px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-envelope:hover,
@@ -191,6 +194,9 @@ img {
 .type-link {
   color: #757575;
   text-decoration: none;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -273,7 +279,54 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
+.backdrop {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
 
+  background: rgba(0, 0, 0, 0.2);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
 /* секция преимущества **********************************/
 .visually-hidden {
   position: absolute !important;
@@ -401,6 +454,11 @@ img {
   justify-content: center;
 }
 
+.sociale-link-transparent {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .sociale-link-transparent:hover,
 .sociale-link-transparent:focus {
   background-color: var(--accent-color);
@@ -444,6 +502,9 @@ img {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .icon-logo,
@@ -491,6 +552,8 @@ img {
 .footer-mail,
 .footer-tel {
   text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-adress:hover,
@@ -523,6 +586,11 @@ img {
 
   margin-bottom: 20px;
   padding-top: 12px;
+}
+
+.sociale-link-dark {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sociale-link-dark:hover,
@@ -562,6 +630,8 @@ img {
 }
 .filter-button {
   padding: 6px 22px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -583,6 +653,9 @@ img {
   flex-basis: calc((100% - 3 * 30px) / 3);
   margin-top: 30px;
   margin-left: 30px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .type-item:hover,
 .type-item:focus {
@@ -590,18 +663,53 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.type-item:hover .type-description,
+.type-item:focus .type-description {
+  transform: translateY(0%);
+}
+
 .type-link {
+  display: block;
+
   color: #757575;
   text-decoration: none;
   margin: 0;
   padding: 0;
 }
 
-.img {
+.type-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img {
   display: block;
   width: 100%;
 }
 
+.type-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  transform: translateY(100%);
+
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  padding-left: 24px;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .type-cover {
   padding-left: 24px;
   padding-right: 24px;
